@@ -36,6 +36,23 @@ router.post('/', (req, res) => {
             res.sendStatus(500); // Good server always responds
         })
 })
+router.delete('/:id', (req, res) => {
+    // NOTE: This route is incomplete.
+    console.log('req.params', req.params.id);
+    let id = req.params.id
+  
+    let sqlText = `DELETE FROM "guests" WHERE "id" = $1`
+ 
+    let params = [id];
+  
+    pool.query(sqlText, params).then( result => {
+        res.sendStatus(204);
+    }).catch(error => {
+        console.log(error)
+        res.sendStatus(500);
+    })
+  
+  });
 
 
 module.exports = router;
