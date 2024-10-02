@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios'
 
-function GuestList({guestList,props}) {
+function GuestList(props) {
 
   const deleteItem = (guestId) => {
     axios.delete(`/api/guests/${guestId}`)
@@ -22,7 +22,7 @@ function GuestList({guestList,props}) {
         </tr>
       </thead>
       <tbody>
-        {guestList.map((guest) => (
+        {props.guestList.map((guest) => (
           <tr key={guest.id}>
             <td>{guest.name}</td>
             <td>{String(guest.kidsMeal)}</td>
