@@ -1,18 +1,21 @@
-function DinnerSupplies(props){
+function DinnerSupplies({guestList}){
 return(
 <>
 <h2>Dinner Supplies</h2>
+
       <div>
-        Spoons: {props.guestList.length * 2}
+        Spoons: {guestList * 2}
       </div>
       <div>
-        Forks: {props.guestList.length * 2}
+        Forks: {guestList * 2}
       </div>
       <div>
-        Knives: {props.guestList.length * 2}
+        Knives: {guestList * 2}
       </div>
 </>
 )
 
 }
 export default DinnerSupplies;
+
+//Const SPOON_COUNT = 2

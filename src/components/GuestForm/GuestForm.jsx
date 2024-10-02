@@ -27,11 +27,7 @@ function GuestForm(props){
         alert('Error Adding Guest');
         console.log(err);
       })
-  };
-
-  
-
-  
+  }; 
 
     return(
 <>

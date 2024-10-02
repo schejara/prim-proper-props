@@ -19,7 +19,7 @@ function GuestList(props) {
         <tr>
           <th>Name</th>
           <th>Kids Meal</th>
-        </tr>
+        </tr> 
       </thead>
       <tbody>
         {props.guestList.map((guest) => (

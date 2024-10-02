@@ -12,7 +12,7 @@ import PartyLeader from '../PartyLeader/PartyLeader';
 
 function App() {
   let [guestList, setGuestList] = useState([]);
-  let [newGuestMeal, setNewGuestMeal] = useState('false');
+ 
 
   //On load, get guests
   useEffect(() => {
@@ -36,7 +36,7 @@ function App() {
 
   
 
-  console.log(newGuestMeal)
+  //console.log(newGuestMeal)
   return (
     <div className="App">
       <Header/>
@@ -48,7 +48,7 @@ function App() {
           
       <GuestForm getGuests={getGuests}  />
       
-      <DinnerSupplies guestList = {guestList}/>
+      <DinnerSupplies guestList = {guestList.length}/>
      <Footer/>
     </div>
   );
